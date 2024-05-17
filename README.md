@@ -20,7 +20,7 @@ make all
 
 if this doesn't run use:
 ```
->./build/Build
+./build/Build
 ```
 # Check for dll library in build folder:
 for the program to work it is required that the SDL2.dll file is stored in the same directory as build file.
