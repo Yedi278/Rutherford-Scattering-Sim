@@ -7,19 +7,20 @@ This is an engine for replicating the alpha particle (blue dots) interaction wit
 
 >make
 
-SDL2 Library is used for rendering graphics. It should automatically determine nVidia GPU specs. If not working upload a compatible SDL2 release from [here](https://github.com/libsdl-org/SDL/releases/)
+SDL2 Library is used for rendering graphics. It should automatically determine nVidia GPU specs. If not working, upload a compatible SDL2 release from [here](https://github.com/libsdl-org/SDL/releases/)
 
 # Manually Build the program
+```
+git clone https://github.com/Yedi278/Rutherford-Scattering-Sim.git
 
->git clone https://github.com/Yedi278/Rutherford-Scattering-Sim.git
+cd Rutherford-Scattering-Sim
 
->cd Rutherford-Scattering-Sim
-
->make all
+make all
+```
 
 if this doesn't run use:
-
+```
 >./build/Build
-
+```
 # Check for dll library in build folder:
-for the program to work it is required that the SDL2.dll file is stored in the same directory.
+for the program to work it is required that the SDL2.dll file is stored in the same directory as build file.
