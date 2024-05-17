@@ -25,7 +25,7 @@ public:
     void update(float dt);
     void shutdown();
     void clean();
-    void addElectron(float y, float vo);
+    void addParticle(float y, float vo);
     void addNucleum(float x,float y);
 
     std::vector<Particle*> electrons;

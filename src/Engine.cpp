@@ -7,6 +7,7 @@
 Engine::Engine(){
     // Constructor
     int val = init();   //control the initialization of the engine SDL parameters
+    std::cout << val << std::endl;
     switch (val)
     {
         case 1:
@@ -32,17 +33,21 @@ int Engine::init(){
     if(window == NULL){
         std::cerr << "Error creating window:"<< std::endl;
         return -1;
-    }
+    }else{
+        std::cerr << "Window successfully created" << std::endl;}
+
 
     renderer = SDL_CreateRenderer(window, -1, 0);
     if(renderer == NULL){
         std::cerr << "Error creating renderer:"<< std::endl;
         return -1;
-    }
+    }else{
+        std::cerr << "Renderer successfully created" << std::endl;}
+    
     return 1;
 }
 
-void Engine::addElectron(float y, float vo){
+void Engine::addParticle(float y, float vo){
     // Run the engine
     Particle* p = new Particle();
     p->q = 1;

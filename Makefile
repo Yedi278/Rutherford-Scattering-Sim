@@ -9,23 +9,20 @@ INCLUDE = libs/SDL2/include
 
 libs = -L$(LIB) -I$(INCLUDE) -lSDL2main  -lSDL2
 
+all: default run
+
 default:
-
 	
-	@echo -n "Compiling the source files..."
-	@echo "Source files: "$(SRC)
+#	echo \
+	echo "Source files: "$(SRC)\
 	@echo "Header files : "$(HEADS)
-	@echo "Library files: "$(LIB) "Include files: "$(INCLUDE) "libs: "$(libs)
+#	@echo "Library files: "$(LIB) "Include files: "$(INCLUDE) "libs: "$(libs)
 
-
-
-
+	@echo "\033[0;33m Compiling the source files...\033[0m"
 	@$(CC) $(CFLAGS) $(SRC) $(libs) -o build/Build
-
-	@echo -e "\033[0;32m [OK] \033[0m	\033[0;33m Compiled:\033[0m" $<
+	@echo 
+	@echo "\e[0;36m [Succesfully Compiled!] \e[0m"
 
 run:
 	@echo "Running the program..."
 	@./build/Build
-
-all: default run
