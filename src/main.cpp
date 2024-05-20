@@ -9,7 +9,7 @@
 #undef main
 #define FPS 120
 
-Uint32 a;
+Uint32 a,b;
 
 int main() {
 
@@ -21,25 +21,25 @@ int main() {
     // Uncomment for Coulomb's law
     float vel_o_part = 4e2;
 
-    // eng.addParticle(460,vel_o_part);
-    // eng.addParticle(470,vel_o_part);
-    // eng.addParticle(480,vel_o_part);
+    eng.addParticle(460,vel_o_part);
+    eng.addParticle(470,vel_o_part);
+    eng.addParticle(480,vel_o_part);
 
-    eng.addNucleum(600,100);
-    eng.addNucleum(600,200);
-    eng.addNucleum(600,300);
-    eng.addNucleum(600,400);
+    // eng.addNucleum(600,100);
+    // eng.addNucleum(600,200);
+    // eng.addNucleum(600,300);
+    // eng.addNucleum(600,400);
     eng.addNucleum(600,500);
 
     //Uncomment for Gravity law
     // float vel_o_part = 6e2;
     // eng.addNucleum(600,300);
 
-    for(int i = 0; i < 600; i++){
-        eng.addParticle(i,vel_o_part);
-    }
+    // for(int i = 0; i < 600; i++){
+    //     eng.addParticle(i,vel_o_part);
+    // }
 
-
+    b = SDL_GetTicks(); 
     a = SDL_GetTicks();
     
     while (eng.running == true){
@@ -52,6 +52,12 @@ int main() {
             
             while(SDL_GetTicks() - a < 1000/FPS){
                 
+                if(SDL_GetTicks() - b > 2000){
+                    eng.addParticle(460,vel_o_part);
+                    eng.addParticle(470,vel_o_part);
+                    eng.addParticle(480,vel_o_part);
+                    b = SDL_GetTicks();
+                }
                 eng.render();
                 eng.handleEvents();
             }
