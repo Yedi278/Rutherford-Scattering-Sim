@@ -87,11 +87,10 @@ void Engine::update(float dt){
         part->acc = F;
         
         // Perform Verlet integration to update the particle's position and velocity
-        Verlet::Integrator(part, dt);
+        RK4::Integrator(part, dt);
         part->traces.push_back({part->pos->x, part->pos->y});
     }
 }
- 
 
 void Engine::render(){
     // Render the engine
@@ -116,7 +115,6 @@ void Engine::render(){
                 SDL_RenderDrawPoint(renderer, t.x, t.y);
             }
         }
-        
     }
 
     for(auto part : nucleus){
