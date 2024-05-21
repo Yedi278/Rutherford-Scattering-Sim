@@ -24,3 +24,5 @@ if this doesn't run use:
 ```
 # Check for dll library in build folder:
 for the program to work it is required that the SDL2.dll file is stored in the same directory as build file.
+
+![Alt Text](https://github.com/Yedi278/Rutherford-Scattering-Sim/blob/b45558b9e6e09e934655df0450ac1152b2aeab62/videos/first_video.gif)
