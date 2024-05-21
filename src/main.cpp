@@ -20,9 +20,9 @@ int main() {
     // Uncomment for Coulomb's law
     float vel_o_part = 4e2;
 
-    eng.addParticle(460,vel_o_part);
-    eng.addParticle(470,vel_o_part);
-    eng.addParticle(480,vel_o_part);
+    // eng.addParticle(460,vel_o_part);
+    // eng.addParticle(470,vel_o_part);
+    // eng.addParticle(480,vel_o_part);
 
     eng.addNucleum(600,100);
     eng.addNucleum(600,200);
@@ -30,9 +30,9 @@ int main() {
     eng.addNucleum(600,400);
     eng.addNucleum(600,500);
 
-    // for(int i = 0; i < 600; i++){
-    //     eng.addParticle(i,vel_o_part);
-    // }
+    for(int i = 0; i < 600; i++){
+        eng.addParticle(i,vel_o_part);
+    }
     
     //Uncomment for Gravity law
     // float vel_o_part = 6e2;
